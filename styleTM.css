@@ -1,0 +1,482 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #131314;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: url("images/sinam-movie-review.jpg") no-repeat center center/cover;*/
+    backdrop-filter: blur(5px);
+    opacity: 0.3;
+  }
+  header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*border: 4px solid gray;*/
+    border-radius: 20px;
+    z-index: 2;
+  }
+  
+  header nav {
+    width: 100%;
+    height: 7.5%;
+    background-color: #2a2a2a95;
+    /*border: 1px solid #fff;*/
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav .logo {
+    margin-left: 1px;
+    margin-top: 30px;
+  }
+  /*header nav .logo img {
+    height: 7vh;
+  }*/
+  header nav .brand {
+    width: 15%;
+    height: 75%;
+    /*border: 1px solid #fff;*/
+    color: #00e5ff;
+    font-family: "system-ui";
+    font-size: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  header nav .brand:hover {
+    width: 15%;
+    height: 75%;
+    color: rgb(7, 103, 129);
+  }
+  header nav ul {
+    width: 60%;
+    height: 50%;
+    /*border: 1px solid #fff;*/
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  header nav ul li {
+    list-style-type: none;
+    padding: 3px 10px;
+  }
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "system-ui";
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  header nav ul li a:hover {
+    color: rgb(0, 176, 252);
+  }
+  
+  header nav .search {
+    width: 20%;
+    height:50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  header nav .search input {
+    width: 90%;
+    padding: 5px 0px 3px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+  }
+  
+  /* nav end */
+  
+  header .card {
+    width: 300px;
+    height: 250px;
+    right: 25%;
+    top: 19%;
+    position: absolute;
+    display: flex;
+    border-radius: 10px;
+    background: rgba(128, 128, 128, 0.336);
+    box-shadow: 10px rgb(8, 7, 7);
+  }
+  header .card1 {
+    width: 300px;
+    height: 250px;
+    right: 55%;
+    top: 19%;
+    position: absolute;
+    display: flex;
+    border-radius: 10px;
+    background: rgba(128, 128, 128, 0.336);
+    box-shadow: 10px rgb(8, 7, 7);
+  }
+  
+  /*cards start */
+  header .cards {
+    /* border: 1px solid #fff;*/
+    width: 85%;
+    height: 30%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .cards .card {
+    position: relative;
+    width: 125px;
+    height: 180px;
+    top: 190%;
+    right: 1%;
+    /* border: 1px solid red;*/
+    margin: 10px;
+    border-radius: 10px;
+  }
+  header .cards .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  header .cards .card .content {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    border-radius: 0px 0px 10px 10px;
+    /* background: red;*/
+    top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 0;
+    z-index: 2;
+  }
+  header .cards .card .content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background: rgb(185, 185, 185, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+  }
+  header .cards .card .content h4 {
+    color: #fff;
+    font-size: 20px;
+  }
+  header .cards .card .content p {
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  @media only screen and (max-width: 1190px){
+    header .cards .card{
+      top: 230%;
+    }
+  
+    header .card{
+      right: 15%;
+    }
+  }
+  @media only screen and (max-width: 1024px){
+  header .cards{
+    height: 25%;
+  }
+  }
+  @media only screen and (max-width: 552px){
+    header nav .logo img {
+      height: 4vh;
+    }
+    header nav .brand{
+      height: 110%;
+      font-size: 13px;
+      width: 13%;
+    }
+    header nav ul li a{
+      font-size: 10px;
+    }
+    header nav .search{
+      width: 30%;
+    }
+    header nav .search input{
+      width: 290%;
+    }
+    header .card{
+      top: 25%;
+      right: 23%;
+    }
+    header .card1{
+      right: 23%;
+      top: 90%;
+    }
+    header .cards{
+      height: 60%;
+    
+    }
+  }
+  @media only screen and (max-width: 280px){
+  header nav .logo img{
+    height: 1vh;
+  }
+  header nav .brand{
+      height: 10%;
+      font-size: 5px;
+  }
+  header nav ul li a {
+    font-size: 5px;
+  }
+  header nav .search input{
+    width: 100%;
+    height: 35%;
+  }
+  header .card {
+    right: 9%;
+  }
+  header .card1{
+    right: 7%;
+  }
+  }
+  @media only screen and (max-width: 912px){
+    header nav .logo img{
+      height: 3vh;
+    }
+    header nav .brand{
+      height: 50%;
+      font-size: 15px;
+      width: 8%;
+  }
+  header nav ul li a {
+    font-size: 15px;
+  }
+  header nav .search {
+  width: 27%;
+  }
+  header nav .search input{
+    width: 100%;
+    height: 35%;
+  }
+  header .card {
+    right: 55%;
+    top: 20%;
+  }
+  header .card1{
+    right: 13%;
+    top: 20%;
+  }
+  header .cards{
+    height: 17%;
+    width: 75%;
+  }
+  }
+  @media only screen and (max-width: 412px){
+   Header nav {
+      width: 100%;
+      height: 12%;
+      /* border: 1px solid #fff; */
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  header nav .brand{
+    height: 20%;
+    width: 25%;
+    font-size: 15px;
+  }
+  header nav .logo{
+    margin-top: 5px;
+  }
+  header nav ul{
+    width: 63%;
+    height: 65%;
+  }
+  header nav ul li{
+    padding: 25px 10px;
+  }
+  header nav ul li a{
+    font-size: 65%;
+  }
+  header nav .search{
+    width: 60%;
+    height: 50%;
+  }
+  header .cards{
+    height: 33%;
+  }
+  header .card1{
+    right: 15%;
+    top: 55%;
+  }
+  header .card{
+    right: 15%;
+  }
+  }
+  @media only screen and (max-width: 280px){
+    Header nav {
+      width: 100%;
+      height: 12%;
+      /* border: 1px solid #fff; */
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+    header nav .logo img{
+      height: 3vh;
+    }
+    header nav .brand{
+      height: 21%;
+      font-size: 10px;
+  }
+  header nav ul{
+    height: 75%;
+  }
+  header nav ul li a {
+    font-size: 6px;
+  }
+  header nav .search input{
+    width: 100%;
+    height: 33%;
+  }
+  header nav .search{
+    width: 40%;
+    height: 45%;
+  }
+  header .card {
+    right: 0%;
+    top: 20%;
+  }
+  header .cards .card{
+    width: 110px;
+  }
+  header .card1{
+    right: 0%;
+    top: 65%;
+  }
+  header .cards{
+    height: 45%;
+    width: 95%;
+  }
+  }
+  @media only screen and (max-width: 541px){
+      header nav{
+        width: 100%;
+        height: 15%;
+        /* border: 1px solid #fff; */
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    header nav .logo{
+      margin-left: 120px;
+    }
+    header nav .brand{
+      width: 59%;
+    }
+    header nav ul li{
+      padding: 3px 10px;
+    }
+    header nav ul{
+      width: 100%;
+      height: 30%;
+    }
+    header nav ul li a{
+      font-size: 70%;
+    }
+    header nav .search{
+      width: 70%;
+    }
+    header nav .search input{
+      width: 65%;
+    }
+    header .card{
+      right: 13%;
+    }
+    header .card1{
+      right: 13%;
+      top: 60%;
+    }
+    header .cards{
+      height: 37%;
+    }
+    header .cards .card{
+      width: 120px;
+    }
+  }
+  @media only screen and (max-width: 360px){
+    header nav{
+      width: 100%;
+      height: 15%;
+      /* border: 1px solid #fff; */
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  header nav .logo{
+    margin-left: 120px;
+  }
+  header nav .brand{
+    width: 55%;
+    font-size: larger;
+  }
+  header nav ul li{
+    padding: 3px 10px;
+  }
+  header nav ul{
+    width: 100%;
+    height: 30%;
+  }
+  header nav ul li a{
+    font-size: 70%;
+  }
+  header nav .search{
+    width: 74%;
+  }
+  header nav .search input{
+    width: 65%;
+    height: 50%;
+  }
+  header .card{
+    right: 7%;
+  }
+  header .card1{
+    right: 7%;
+    top: 70%;
+  }
+  header .cards{
+    height: 45%;
+    width: 90%;
+  }
+  header .cards .card{
+    width: 120px;
+  }
+  header .cards .card .content h4{
+    font-size: 15px;
+  }
+  }
+  
