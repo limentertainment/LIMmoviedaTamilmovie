@@ -183,10 +183,18 @@
     color: #fff;
     font-size: 20px;
   }
+header .cards .card .content h4:hover{
+  color: #00e5ff;
+  font-size: 20px;
+}
   header .cards .card .content p {
     color: #fff;
     font-size: 15px;
   }
+header .cards .card .content p:hover{
+  color: #00e5ff;
+  font-size: 15px;
+}
   
   @media only screen and (max-width: 1190px){
     header .cards .card{
